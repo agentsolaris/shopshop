@@ -1,7 +1,7 @@
 # shopshop
 Online shop using:
 
--Servlets
+-Java Servlets
 
 -Mysql database
 
