@@ -1,4 +1,4 @@
-# shopshop
+# Online servlet shop
 Online shop using:
 
 -Java Servlets
