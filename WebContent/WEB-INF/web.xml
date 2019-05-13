@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd" id="WebApp_ID" version="3.0">
+  <display-name>shopshop</display-name>
+  <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+    <welcome-file>index.htm</welcome-file>
+    <welcome-file>index.jsp</welcome-file>
+    <welcome-file>default.html</welcome-file>
+    <welcome-file>default.htm</welcome-file>
+    <welcome-file>default.jsp</welcome-file>
+  </welcome-file-list>
+  <servlet>
+		<description></description>
+		<display-name>LoginController</display-name>
+		<servlet-name>LoginController</servlet-name>
+		<servlet-class>com.eduard.LoginController</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>LoginController</servlet-name>
+		<url-pattern>/LoginController</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<description></description>
+		<display-name>RegisterController</display-name>
+		<servlet-name>RegisterController</servlet-name>
+		<servlet-class>com.eduard.RegisterController</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>RegisterController</servlet-name>
+		<url-pattern>/RegisterController</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<description></description>
+		<display-name>AddProductController</display-name>
+		<servlet-name>AddProductController</servlet-name>
+		<servlet-class>com.eduard.AddProductController</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>AddProductController</servlet-name>
+		<url-pattern>/AddProductController</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<description></description>
+		<display-name>RemoveProductController</display-name>
+		<servlet-name>RemoveProductController</servlet-name>
+		<servlet-class>com.eduard.RemoveProductController</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>RemoveProductController</servlet-name>
+		<url-pattern>/RemoveProductController</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<description></description>
+		<display-name>ModifyProductController</display-name>
+		<servlet-name>ModifyProductController</servlet-name>
+		<servlet-class>com.eduard.ModifyProductController</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>ModifyProductController</servlet-name>
+		<url-pattern>/ModifyProductController</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<description></description>
+		<display-name>ModifyProductAfterController</display-name>
+		<servlet-name>ModifyProductAfterController</servlet-name>
+		<servlet-class>com.eduard.ModifyProductAfterController</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>ModifyProductAfterController</servlet-name>
+		<url-pattern>/ModifyProductAfterController</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<description></description>
+		<display-name>CartController</display-name>
+		<servlet-name>CartController</servlet-name>
+		<servlet-class>com.eduard.CartController</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>CartController</servlet-name>
+		<url-pattern>/CartController</url-pattern>
+	</servlet-mapping>
+	
+	
+	<servlet>
+		<description></description>
+		<display-name>BuyController</display-name>
+		<servlet-name>BuyController</servlet-name>
+		<servlet-class>com.eduard.BuyController</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>BuyController</servlet-name>
+		<url-pattern>/BuyController</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<description></description>
+		<display-name>StatusController</display-name>
+		<servlet-name>StatusController</servlet-name>
+		<servlet-class>com.eduard.StatusController</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>StatusController</servlet-name>
+		<url-pattern>/StatusController</url-pattern>
+	</servlet-mapping>
+	
+	
+		<servlet>
+		<description></description>
+		<display-name>RemoveCartController</display-name>
+		<servlet-name>RemoveCartController</servlet-name>
+		<servlet-class>com.eduard.RemoveCartController</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>RemoveCartController</servlet-name>
+		<url-pattern>/RemoveCartController</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<description></description>
+		<display-name>ModifyCartController</display-name>
+		<servlet-name>ModifyCartController</servlet-name>
+		<servlet-class>com.eduard.ModifyCartController</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>ModifyCartController</servlet-name>
+		<url-pattern>/ModifyCartController</url-pattern>
+	</servlet-mapping>
+	
+	
+</web-app>
