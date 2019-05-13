@@ -5,4 +5,4 @@ Online shop using:
 
 -Mysql database
 
--HTML/JSP
+-HTML5/CSS/JSP
