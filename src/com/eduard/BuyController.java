@@ -76,7 +76,7 @@ public class BuyController extends HttpServlet {
             	
         }
         session.setAttribute("cart", prdInCart);
-        response.sendRedirect("cart.jsp");
+        response.sendRedirect("BuyController");
       
 	} catch (ClassNotFoundException | SQLException e) {
 		// TODO Auto-generated catch block

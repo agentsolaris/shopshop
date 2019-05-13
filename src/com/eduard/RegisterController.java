@@ -16,8 +16,8 @@ import javax.servlet.http.HttpServletResponse;
 public class RegisterController extends HttpServlet {
 	
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		String un=request.getParameter("username");
-		String pw=request.getParameter("password");
+		String un=request.getParameter("name");
+		String pw=request.getParameter("pwd");
 		
 		try {
 			Class.forName("com.mysql.jdbc.Driver");

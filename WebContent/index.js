@@ -2,22 +2,28 @@ $('.message a').click(function(){
    $('form').animate({height: "toggle", opacity: "toggle"}, "slow");
 });
 
-function testLogin(form) {
+function validateForm() {
+   var x = document.forms["loginForm"]["username"].value;
+   var y = document.forms["loginForm"]["password"].value;
+   if (x == "") {
+     alert("Userame must be filled out");
+     return false;
+   }
+   if (y == "") {
+      alert("Password must be filled out");
+      return false;
+    }
+ }
 
-   $.post('LoginController', function(data) {
-      var r=confirm(data);
-      if (r==true)
-         window.location = window.location.href;
-  });
-}
-
-function testRegister(form) {
-
-   $.post('RegisterController', function(data) {
-      var r=confirm(data);
-      console.log(data);
-      if (r==true)
-       window.location = window.location.href;
-
-  });
-}
+ function validateRegForm() {
+   var x = document.forms["registerForm"]["name"].value;
+   var y = document.forms["registerForm"]["pwd"].value;
+   if (x == "") {
+     alert("Userame must be filled out");
+     return false;
+   }
+   if (y == "") {
+      alert("Password must be filled out");
+      return false;
+    }
+ }

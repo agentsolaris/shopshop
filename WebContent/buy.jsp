@@ -4,13 +4,40 @@
     <%@page import="java.util.ArrayList"%>
     <%@page contentType="text/html" pageEncoding="UTF-8"%>
     <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+     <%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
+    
 <html>
 <head>
-    <title>List products</title>
+    <title>List of products</title>
+    <style>
+#products {
+  font-family: "Roboto", sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+#products td, #products th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+#products tr:nth-child(even){background-color: #f2f2f2;}
+
+#products tr:hover {background-color: #ddd;}
+
+#products th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #4CAF50;
+  color: white;
+}
+</style>
 </head>
 <body>
+<div class="login-page">
  
- 	    <table border="1">
+ 	    <table id="products">
         <thead>
             <tr>
      
@@ -39,8 +66,9 @@
           
         </tbody>
     </table>
-    <p><a href="cart.jsp">View Shopping Cart</a></p>
- 	
+    <a href="cart.jsp"><input type="submit" value="View Shopping Cart (${fn:length(cart)})" /></a>
+   
+ 	</div>
 
 </body>
 </html>

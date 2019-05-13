@@ -16,7 +16,6 @@ import javax.servlet.http.HttpServletResponse;
 public class RemoveProductController extends HttpServlet{
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		String name=request.getParameter("name");
-		
 		// Connect to mysql and verify username password
 		
 		try {

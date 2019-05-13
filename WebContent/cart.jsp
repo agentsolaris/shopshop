@@ -6,15 +6,39 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>Shop</title>
+<title>Shopping cart</title>
+    <style>
+#cart {
+  font-family: "Roboto", sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+#cart td, #cart th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+#cart tr:nth-child(even){background-color: #f2f2f2;}
+
+#cart tr:hover {background-color: #ddd;}
+
+#cart th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #4CAF50;
+  color: white;
+}
+</style>
 </head>
 <body>
 
 Shopping Cart<br>
 
  <br> <br>
-               
-        <table border="1">
+  <div class="login-page">             
+        <table id="cart">
             <thead>
                 <tr>
                     <th>Product</th>
@@ -58,9 +82,10 @@ Shopping Cart<br>
     <p>Total: <%= totalOrder%></p>
        <form action="CartController?totalOrder=<%= totalOrder%>" method="post">
                 
-                <a href="CartController?totalOrder=<%= totalOrder%>"><input type="submit" value="buy"} /></a> 
+                <a href="CartController?totalOrder=<%= totalOrder%>"><input type="submit" value="buy" /></a> 
        </form>
    
-     <p><a href="BuyController">Back to buy</a></p>
+     <p><a href="BuyController"><input type="submit" value="Back to buy" /></a></p>
+     </div>
 </body>
 </html>

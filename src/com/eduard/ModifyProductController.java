@@ -15,7 +15,7 @@ import javax.servlet.http.HttpServletResponse;
 
 public class ModifyProductController extends HttpServlet{
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		String name=request.getParameter("name");
+		String name=request.getParameter("name2");
 		
 		// Connect to mysql and verify username password
 		
@@ -31,6 +31,7 @@ public class ModifyProductController extends HttpServlet{
 		rs.last();
 		if (rs.getRow()==0) {
 			request.setAttribute("result", "Product does not exist!");
+	
 			RequestDispatcher rss = request.getRequestDispatcher("RegisterFailure.jsp"); 
 			rss.forward(request, response);
 		}
