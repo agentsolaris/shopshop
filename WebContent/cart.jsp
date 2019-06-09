@@ -7,63 +7,36 @@
 <head>
 <meta charset="ISO-8859-1">
 <title>Shopping cart</title>
-    <style>
-#cart {
-  font-family: "Roboto", sans-serif;
-  border-collapse: collapse;
-  width: 100%;
-}
-
-#cart td, #cart th {
-  border: 1px solid #ddd;
-  padding: 8px;
-}
-
-#cart tr:nth-child(even){background-color: #f2f2f2;}
-
-#cart tr:hover {background-color: #ddd;}
-
-#cart th {
-  padding-top: 12px;
-  padding-bottom: 12px;
-  text-align: left;
-  background-color: #4CAF50;
-  color: white;
-}
-</style>
+<link rel="stylesheet" href="style3.css">
 </head>
 <body>
 
-Shopping Cart<br>
 
- <br> <br>
-  <div class="login-page">             
-        <table id="cart">
-            <thead>
+ <table class="container">    
+    
+    <a href="BuyController"><input type="submit" value="View to product list" /></a>   
+    
+    <thead>
                 <tr>
-                    <th>Product</th>
-                    <th>Quantity</th>
-                    <th>Price</th>
-                    <th>Remove</th>
+                    <th><h1>Product</h1></th>
+                    <th><h1>Quantity</h1></th>
+                    <th><h1>Price</h1></th>
                 
                 </tr>
             </thead>
             <tbody>
-                <%--
-                    - Get all product that added to cart
-                    - Caculate total cash
-                --%>   
-                <%
+                  
+                    <%
                     int totalOrder = 0;
                     HttpSession newSession = request.getSession();
                     if (newSession.getAttribute("cart") != null) {
                         ArrayList<Cart> arrC = (ArrayList<Cart>) newSession.getAttribute("cart");
                         for (int i = 0; i < arrC.size(); i++) {
                             totalOrder += (arrC.get(i).getQuantity() * Integer.parseInt(arrC.get(i).getPrice()));
-                %>   
+                %>        
                 <tr>
                     <td><%= arrC.get(i).getName()%></td>
-                    <td><%= arrC.get(i).getQuantity()%> <a href="ModifyCartController?name=<%= arrC.get(i).getName()%>"><input type="submit" value="-" /></a></td>
+                    <td><%= arrC.get(i).getQuantity()%> <a href="ModifyCartController?name=<%= arrC.get(i).getName()%>"><input type="button" value="-" /></a></td>
                     <td><%= arrC.get(i).getPrice()%></td>
                     <td><a href="RemoveCartController?name=<%= arrC.get(i).getName()%>"><input type="submit" value="remove" /></a> </td>
                     
@@ -77,15 +50,16 @@ Shopping Cart<br>
 
             %>
         </tbody>
+        
     </table>
+    <h1>Total: <%= totalOrder%></h1>
 
-    <p>Total: <%= totalOrder%></p>
+   
        <form action="CartController?totalOrder=<%= totalOrder%>" method="post">
                 
-                <a href="CartController?totalOrder=<%= totalOrder%>"><input type="submit" value="buy" /></a> 
+                <a href="CartController?totalOrder=<%= totalOrder%>"><input type="submit" value="BUY" /></a> 
        </form>
    
-     <p><a href="BuyController"><input type="submit" value="Back to buy" /></a></p>
-     </div>
+     
 </body>
 </html>

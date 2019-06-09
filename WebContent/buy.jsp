@@ -8,67 +8,39 @@
     
 <html>
 <head>
-    <title>List of products</title>
-    <style>
-#products {
-  font-family: "Roboto", sans-serif;
-  border-collapse: collapse;
-  width: 100%;
-}
-
-#products td, #products th {
-  border: 1px solid #ddd;
-  padding: 8px;
-}
-
-#products tr:nth-child(even){background-color: #f2f2f2;}
-
-#products tr:hover {background-color: #ddd;}
-
-#products th {
-  padding-top: 12px;
-  padding-bottom: 12px;
-  text-align: left;
-  background-color: #4CAF50;
-  color: white;
-}
-</style>
+    <meta charset="utf-8">
+    <title>Product list</title>
+    <link rel="stylesheet" href="style2.css">
 </head>
 <body>
-<div class="login-page">
- 
- 	    <table id="products">
-        <thead>
-            <tr>
-     
-                <th>Name</th>
-                <th>Price</th>
-                <th>Qty</th>
-                <th>BUY</th>
-            </tr>
-        </thead>
-        <tbody>
+  <table class="container">
+    <thead>
+      <tr>
+        <th><h1>Name</h1></th>
+        <th><h1>Price</h1></th>
+        <th><h1>Quantity</h1></th>
   
-             <c:forEach items="${products}" var="product">
-    <tr>      
+      </tr>
+    </thead>
+    <c:forEach items="${products}" var="product">
+      <tr>      
         <td>${product.getName()}</td>
         <td>${product.getPrice()}</td>
         <td>${product.getQuantity()}</td>
         <td>
-                <form action="BuyController?name=${product.getName()}" method="post">
-                
-                <a href="BuyController?name=${product.getName()}"><input type="submit" value="buy"} /></a> 
-                </form>
-
-        </td>
-    </tr>
-            </c:forEach>
+            <form action="BuyController?name=${product.getName()}" method="post">
+            
+            <a href="BuyController?name=${product.getName()}"><input type="submit" value="BUY" /></a> 
+            </form>
+    
+        
+      </tr>
+          </c:forEach>
           
         </tbody>
-    </table>
-    <a href="cart.jsp"><input type="submit" value="View Shopping Cart (${fn:length(cart)})" /></a>
-   
- 	</div>
+        <a href="cart.jsp"><input type="submit" value="View Shopping Cart (${fn:length(cart)})" /></a>
+  
+  </table>
 
 </body>
 </html>

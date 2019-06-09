@@ -22,10 +22,10 @@
                        <button  class = "yellowbutton">Modify</button>
                         
         </form>
-        <form action="RemoveProductController?name=${name}" method="post" class="login-form">
+        <!-- <form action="RemoveProductController?name=${name}" method="post" class="login-form">
         			   <input type="text" name="name" placeholder="${name}" hidden= true>
                        <button  class = "button redbutton">Delete product ${name}</button>
-           </form>
+           </form> -->
 
     
   </div>
