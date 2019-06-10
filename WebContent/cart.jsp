@@ -54,10 +54,12 @@
     </table>
     <h1>Total: <%= totalOrder%></h1>
 
-   
+    <button type="button">Click Me!</button> 
        <form action="CartController?totalOrder=<%= totalOrder%>" method="post">
-                
-                <a href="CartController?totalOrder=<%= totalOrder%>"><input type="submit" value="BUY" /></a> 
+            <div style="text-align:center;">
+                       
+                <a href="CartController?totalOrder=<%= totalOrder%>"><input type="submit" value="BUY" /></a>  <input />
+                    </div>    
        </form>
    
      

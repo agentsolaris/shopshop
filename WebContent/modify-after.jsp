@@ -34,7 +34,7 @@
        
         <form action="RemoveProductController?name=${name}" method="post" class="login-form">
         			   <input type="text" name="name" placeholder="${name}" hidden= true>
-                       <button>Delete product ${name}</button>
+                       <button>Delete product "${name}"</button>
            </form>
 
     

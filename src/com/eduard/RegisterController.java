@@ -47,12 +47,10 @@ public class RegisterController extends HttpServlet {
 			ps.setString(2, pw);
 			ps.setString(1, un);
 			ps.executeUpdate();
-			response.setContentType("text/plain");
-			response.setCharacterEncoding("UTF-8");
-			response.getWriter().write("Registration succesful!");
-			//request.setAttribute("result", "Registration was a big succes!");
-			//RequestDispatcher rss = request.getRequestDispatcher("RegisterFailure.jsp"); 
-			//rss.forward(request, response);
+			request.setAttribute("result", "Registration succesful!");
+			RequestDispatcher rss = request.getRequestDispatcher("RegisterFailure.jsp"); 
+			rss.forward(request, response);
+			
 			ps.close();
 			return;
 			//response.sendRedirect("index.html");
