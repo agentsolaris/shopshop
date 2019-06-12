@@ -1,6 +1,6 @@
 # Online shop
 
--Java Servlets
+-Java Servlets & Tomcat 7
 
 -Mysql database
 
